@@ -24,26 +24,20 @@
  */
 
 //Configuration
-var ad_url;
-var vimeo_url;
-var video_width;
-var video_height;
-var video_container;
-var autoplay;
-			
+var vimeoprerollad_config = {};
 var debug = false; //Output to console
-
 
 /**
  * Entry point
  */
 function init_preroll_ad(config){
-	video_container = config.container;
-	vimeo_url = config.vimeo_url;
-	ad_url = config.ad_url;
-	video_width = config.width ? config.width : 640;
-	video_height = config.height ? config.height : 360;
-	autoplay = config.autoplay ? config.autoplay : true;
+	vimeoprerollad_config.video_container = config.container;
+	vimeoprerollad_config.vimeo_url = config.vimeo_url;
+	vimeoprerollad_config.ad_url = config.ad_url;
+	vimeoprerollad_config.video_width = config.width ? config.width : 640;
+	vimeoprerollad_config.video_height = config.height ? config.height : 360;
+	vimeoprerollad_config.autoplay = config.autoplay ? config.autoplay : true;
+	vimeoprerollad_config.vimeo_info_path = config.vimeo_info_path ? config.vimeo_info_path : "vimeo.php";
 	
 	//Away we go!
 	init_jwplayer();
@@ -57,17 +51,17 @@ function init_jwplayer()
 {
 	
 	//Setup the JWPlayer
-	jwplayer(video_container).setup({
+	jwplayer(vimeoprerollad_config.video_container).setup({
 		flashplayer: "js/jwplayer/player.swf",
-		file: ad_url,
+		file: vimeoprerollad_config.ad_url,
 		controlbar: "none",
-		autostart: autoplay,
-		width: video_width,
-		height: video_height
+		autostart: vimeoprerollad_config.autoplay,
+		width: vimeoprerollad_config.video_width,
+		height: vimeoprerollad_config.video_height
 	});
 				
 	//Setup the event to fire on the completion of the pre-roll ad
-	jwplayer(video_container).onComplete(switch_to_vimeo);
+	jwplayer(vimeoprerollad_config.video_container).onComplete(switch_to_vimeo);
 }
 			
 /**
@@ -76,10 +70,10 @@ function init_jwplayer()
 function switch_to_vimeo(event)
 {
 	//unload the jwplayer
-	jwplayer(video_container).remove();
+	jwplayer(vimeoprerollad_config.video_container).remove();
 				
 	//Load in vimeo player
-	embed_code = get_vimeo_embed(vimeo_url);
+	embed_code = get_vimeo_embed(vimeoprerollad_config.vimeo_url);
 				
 	jQuery("#mediaplayer").html(embed_code);
 }
@@ -91,9 +85,9 @@ function get_vimeo_embed(url)
 {
 	data = {};
 	data.url = url;
-	data.width = video_width;
-	data.height = video_height;
-	api_endpoint = "vimeo.php";
+	data.width = vimeoprerollad_config.video_width;
+	data.height = vimeoprerollad_config.video_height;
+	api_endpoint = vimeoprerollad_config.vimeo_info_path;
 	
 	if (debug) console.log("Data sent to server:");
 	if (debug) console.debug(data);

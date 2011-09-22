@@ -11,9 +11,9 @@
 	<body>
 
 		<h1>Video</h1>
-		
+
 		<p>Example of video pre-roll using JWPlayer and Vimeo.	</p>
-	<div id="mediaplayer"></div>
+		<div id="mediaplayer"></div>
         <h2>Instructions</h2>
         <p>Create a div tag with unique ID:</p>
         <pre>		&lt;div id=&quot;mediaplayer&quot;&gt;&lt;/div&gt;</pre>
@@ -21,14 +21,10 @@
         <pre>		&lt;script&gt;<br>			jQuery(document).ready(function(){<br>				settings = {<br>					container: &quot;mediaplayer&quot;,<br>					vimeo_url: &quot;http://vimeo.com/29274467&quot;,<br>					ad_url: &quot;videos/video.mp4&quot;,<br>					width: 900,<br>					height: 600,<br>					autoplay: &quot;true&quot;<br>				};<br>			<br>				init_preroll_ad(settings);<br>				<br>			});<br>			<br>		&lt;/script&gt;</pre>
 
 		<p>
-		  <!-- Settings -->
-		  <!-- Set these values using PHP. Can be output from Wordpress -->
-  <!-- /Settings -->
-		  
-		  You can use PHP to dynamically output the settings in your Wordpress theme.	</p>
+			You can use PHP to dynamically output the settings in your Wordpress theme.	</p>
 		<p>Enjoy,</p>
 		<p>Leo        </p>
-    <script>
+		<script>
 			jQuery(document).ready(function(){
 				settings = {
 					container: "mediaplayer",
@@ -43,6 +39,6 @@
 				
 			});
 			
-		  </script>
+		</script>
 	</body>
 </html>

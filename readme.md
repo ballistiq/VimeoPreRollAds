@@ -2,8 +2,12 @@
 
 Someone needed a quick and dirty way to insert a pre-roll ad but they were using Vimeo. This enables you to run a pre-roll ad and then switch over to a Vimeo video.
 
-Author: Leonard Teo, Ballistiq Digital
-License: MIT license
+	Author: Leonard Teo, Ballistiq Digital
+	License: MIT license
+
+Note that JWPlayer is a commercial product. It is provided in this repository for reference only. If you use it for commercial purposes, you will need to purchase a commercial license from LongTail Ad Solutions.
+
+More information about JWPlayer is available from its website at: http://www.longtailvideo.com/
 
 ## License
 

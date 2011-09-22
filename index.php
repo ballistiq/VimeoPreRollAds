@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Vimeo Ad Pre-Roll</title>
+		<title>Vimeo Pre-Roll Ads</title>
 
 		<script src="js/jquery-1.6.4.min.js"></script>
 		<script src="js/jwplayer/jwplayer.js"></script>
@@ -10,7 +10,7 @@
 	</head>
 	<body>
 
-		<h1>Vimeo Ad Pre-Roll</h1>
+		<h1>Vimeo Pre-Roll Ads</h1>
 
 		<p>Example of video pre-roll using JWPlayer and Vimeo.	</p>
 		<div id="mediaplayer"></div>

@@ -1,4 +1,4 @@
-# Vimeo Ad Pre-Roll
+# Vimeo Pre-Roll Ads
 
 Someone needed a quick and dirty way to insert a pre-roll ad but they were using Vimeo. This enables you to run a pre-roll ad and then switch over to a Vimeo video.
 

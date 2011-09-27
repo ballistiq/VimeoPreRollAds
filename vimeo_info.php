@@ -93,16 +93,16 @@ function get_vimeo_share_data($url, $max_width = 640, $max_height = 360)
 	$obj = json_decode($json);
 	
 	//Cull the description
-	$description = $obj->description;
+	$description = isset($obj->description) ? $obj->description : "";
 	if ($description != NULL && strlen($description) > 255)
 	{
 		$description = substr($description, 0, 255) . "...";
 	}
 
 	return array(
-		'title' => trim($obj->title),
+		'title' => isset($obj->title) ? trim($obj->title) : "",
 		'description' => trim($description),
-		'thumbnail' => trim($obj->thumbnail_url),
+		'thumbnail' => isset($obj->thumbnail_url) ? trim($obj->thumbnail_url) : "",
 		'is_video' => true,
 		'embed_code' => trim($obj->html)
 	);

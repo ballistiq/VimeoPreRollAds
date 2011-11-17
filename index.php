@@ -12,9 +12,7 @@
 
 		<h1>Vimeo Pre-Roll Ads</h1>
 
-		<p>Example of video pre-roll using JWPlayer and Vimeo.	</p>
-		<p>Changelog: </p>
-		<p>17 November 2011 - Made video pre-roll clickable to your own URL</p>
+		<p>Example of video pre-roll using JWPlayer and Vimeo.</p>
 <div id="mediaplayer"></div>
         <h2>Instructions</h2>
         <p>This relies on two main files:</p>

@@ -9,6 +9,11 @@ Note that JWPlayer is a commercial product. It is provided in this repository fo
 
 More information about JWPlayer is available from its website at: http://www.longtailvideo.com/
 
+# Change Log
+
+* 17 November 2011 - Made video pre-roll clickable to your own URL
+
+
 ## License
 
 	Copyright (C) 2011 by Ballistiq Digital

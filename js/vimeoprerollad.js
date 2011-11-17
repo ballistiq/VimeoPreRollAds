@@ -38,6 +38,7 @@ function init_preroll_ad(config){
 	vimeoprerollad_config.video_height = config.height ? config.height : 360;
 	vimeoprerollad_config.autoplay = config.autoplay ? config.autoplay : true;
 	vimeoprerollad_config.vimeo_info_path = config.vimeo_info_path ? config.vimeo_info_path : "vimeo.php";
+	vimeoprerollad_config.link_url = config.link_url ? config.link_url : "";
 	
 	//Away we go!
 	init_jwplayer();
@@ -49,7 +50,6 @@ function init_preroll_ad(config){
  */
 function init_jwplayer()
 {
-	
 	//Setup the JWPlayer
 	jwplayer(vimeoprerollad_config.video_container).setup({
 		flashplayer: "js/jwplayer/player.swf",
@@ -57,7 +57,9 @@ function init_jwplayer()
 		controlbar: "none",
 		autostart: vimeoprerollad_config.autoplay,
 		width: vimeoprerollad_config.video_width,
-		height: vimeoprerollad_config.video_height
+		height: vimeoprerollad_config.video_height,
+		link: vimeoprerollad_config.link_url,
+		displayclick: "link"
 	});
 				
 	//Setup the event to fire on the completion of the pre-roll ad
